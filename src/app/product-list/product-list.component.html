@@ -1,5 +1,5 @@
 <div class="ekart-product--container">
-  <img [src]="product.image" alt="" srcset="">
+  <!-- <img [src]="product.image" alt="" srcset="">
   <p>Name: {{ product.name }}</p>
   <p>Price: {{ product.price + "€" }}</p>
   <p>Color: {{ product.color }}</p>
@@ -7,10 +7,11 @@
   <p>{{ product.inStock > 0 ? 'Only ' + product.inStock + ' items left': 'Not inStock' }}</p>
   <button (click)="decrementCartValue()">-</button>
   <span>{{ addToCart }}</span>
-  <button (click)="incrementCartValue()">+</button>
+  <button (click)="incrementCartValue()">+</button> -->
   <!-- <button [disabled]="!(product.inStock > 0)">Buy Now</button> -->
   <!-- Disabled, Hidden, Cheked no utilizar string interpolation -->
   <!-- <p><input (input)="onChangeName($event)"></p>
   <p>Name: {{ client }}</p> -->
+  <app-search></app-search>
 </div>
 
