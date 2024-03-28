@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent {
+  client: string = "John Doe";
   product = {
     name: "iphone",
     price: 99.99,
