@@ -17,6 +17,7 @@ export class ProductListComponent {
       size: [6, 7, 8, 9, 10],
       color: ["White", "Black", "Red"],
       price: 160,
+      discountPrice: 0,
       is_in_invertory: true,
       imageUrl: "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/cf45e4d8-ecdf-4d1a-899f-98c32b34bcbb/air-jordan-1-low-zapatillas-QnthX1.png" },
     {
@@ -29,6 +30,7 @@ export class ProductListComponent {
       size: [6, 7, 8, 9, 10],
       color: ["White", "Black", "Red"],
       price: 160,
+      discountPrice: 90,
       is_in_invertory: true,
       imageUrl: "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/cf45e4d8-ecdf-4d1a-899f-98c32b34bcbb/air-jordan-1-low-zapatillas-QnthX1.png",
       slug: "nike-react-infinity-run-flyknit"
@@ -43,9 +45,14 @@ export class ProductListComponent {
       size: [6, 7, 8, 9, 10],
       color: ["White", "Black", "Red"],
       price: 160,
-      is_in_invertory: true,
+      discountPrice: 125,
+      is_in_invertory: false,
       imageUrl: "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/cf45e4d8-ecdf-4d1a-899f-98c32b34bcbb/air-jordan-1-low-zapatillas-QnthX1.png",
       slug: "nike-react-infinity-run-flyknit"
     }
   ]
+
+  productDisconuntPrice(prod: any) {
+    return ((prod.discountPrice / prod.price * 100 )).toFixed(0);
+  }
 }
