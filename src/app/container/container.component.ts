@@ -8,4 +8,10 @@ import { Component, Input } from '@angular/core';
 export class ContainerComponent {
   listOfString: string[] = ['Pilar', 'Jon', 'Isidro', 'Rolly'];
 
+  seachText: string = ''; // para recoger data del seach-compoment
+
+  setSearchText(value: string) {
+    this.seachText = value;
+  }
+
 }

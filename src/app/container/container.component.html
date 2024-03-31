@@ -12,11 +12,11 @@
   <!-- Disabled, Hidden, Cheked no utilizar string interpolation -->
   <!-- <p><input (input)="onChangeName($event)"></p>
   <p>Name: {{ client }}</p> -->
-  <app-search></app-search>
+  <app-search (searchTextChanged)="setSearchText($event)"></app-search>
 
-  <product-list></product-list>
+  <product-list [searchText]="seachText"></product-list>
 
-  
+
 
 
 

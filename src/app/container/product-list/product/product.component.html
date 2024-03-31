@@ -5,7 +5,7 @@
       <!-- <i>{{ i+1 }}</i> -->
     </div>
     <div class="elkar-on-sale-tag">
-      {{ productDisconuntPrice(product) }}% OFF
+      {{(100 - product.discountPrice / product.price * 100).toFixed(0) }}% OFF
     </div>
   </div>
   <div class="ekart--product--image">
