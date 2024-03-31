@@ -17,7 +17,7 @@ export class ProductComponent {
       size: number[],
       color: string[],
       price: number,
-      discountPrice: number,
+      discountPrice?: number,
       is_in_invertory: boolean,
       items_left: number,
       imageUrl: string
