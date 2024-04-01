@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Product } from 'src/app/Models/Product';
 
 @Component({
   selector: 'app-product',
@@ -7,21 +8,7 @@ import { Component, Input } from '@angular/core';
 })
 export class ProductComponent {
   @Input()
-  product: {
-      id: number,
-      name: string,
-      description: string,
-      brand: string,
-      gender: string,
-      category:string,
-      size: number[],
-      color: string[],
-      price: number,
-      discountPrice?: number,
-      is_in_invertory: boolean,
-      items_left: number,
-      imageUrl: string
-  };
+  product: Product;
 
   productDisconuntPrice(prod: any) {
     return ((prod.discountPrice / prod.price * 100 )).toFixed(0);

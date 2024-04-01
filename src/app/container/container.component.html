@@ -14,7 +14,8 @@
   <p>Name: {{ client }}</p> -->
   <app-search (searchTextChanged)="setSearchText($event)"></app-search>
 
-  <product-list [searchText]="seachText"></product-list>
+  <product-list [searchText]="seachText" #productListComponent></product-list>
+  <product-deatil *ngIf="productListComponent.selectedProduct" [productListComp]="productListComponent"></product-deatil>
 
 
 

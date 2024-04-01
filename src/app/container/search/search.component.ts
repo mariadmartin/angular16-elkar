@@ -29,4 +29,5 @@ export class SearchComponent {
     console.log(inputEL.value);
   }
 
+
 }
