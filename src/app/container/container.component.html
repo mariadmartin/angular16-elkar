@@ -12,14 +12,31 @@
   <!-- Disabled, Hidden, Cheked no utilizar string interpolation -->
   <!-- <p><input (input)="onChangeName($event)"></p>
   <p>Name: {{ client }}</p> -->
+
   <app-search (searchTextChanged)="setSearchText($event)"></app-search>
 
   <product-list [searchText]="seachText" #productListComponent></product-list>
-  <product-deatil *ngIf="productListComponent.selectedProduct" [productListComp]="productListComponent"></product-deatil>
 
+  <product-deatil *ngIf="productListComponent.selectedProduct"
+    [productListComp]="productListComponent"></product-deatil>
 
-
-
+  <!-- Para las cards inferiores -->
+    <div class="elkart-featured-products">
+    <div class="elkart-featured-product-heading">
+      <h1>Latest Arrival in Popular Brands</h1>
+    </div>
+    <featured-brands>
+      <h3 class="title">New Arrivals in Nike </h3>
+      <button class="call-to-action">Show New Arrivals in Nike</button>
+    </featured-brands>
+    <featured-brands>
+      <h3 class="title">New Arrivals in Addidas </h3>
+      <button class="call-to-action">Show New Arrivals in Addidas</button>
+    </featured-brands>
+    <featured-brands>
+      <h3 class="title">New Arrivals in Reebok </h3>
+      <button class="call-to-action">Show New Arrivals in Reebok</button>
+    </featured-brands>
+  </div>
 
 </div>
-
